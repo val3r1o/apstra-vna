@@ -31,6 +31,7 @@ docker load < apstra-edge-container-0.0.36.tgz
 #-------------------------------------------------------------------------
 # Replace certificate
 # openssl req -newkey rsa:2048 -nodes -keyout nginx.key -x509 -days 1095 -out nginx.crt -addext extendedKeyUsage=serverAuth -addext subjectAltName=DNS:apstra.com,IP:10.28.176.3
+# openssl x509 -in nginx.crt -inform PEM -outform PEM -out 10.28.176.3_ca.cert.pem -days 1095
 #------------------------------------------------------------------------
 
 cd /etc/ssl/certs
