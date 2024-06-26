@@ -6,8 +6,18 @@ cd apstra-edge-0.0.36/
 
 vi docker-compose-0.0.36.yml
 
+#
+sudo tee /test<<EOF
+example
+example test
+EOF
+
+
 # - REGISTRATION_KEY=<registration-code>
 # - CLOUD_TERM=ep-term.ai.juniper.net
+
+# read -p "Enter Your REGISTRATION_KEY: " KEY
+# read -p "Enter Your Apstra_IP_Address: " IPA
 
 mkdir apstra_edge
 
