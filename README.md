@@ -1,12 +1,18 @@
 # apstra-vna
 Apsta-Marvis Installation
 
-official site:
-https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-setup-edge/index.html 
+official site: <br>
+https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-setup-edge/index.html  <br>
 
-https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-user-guide/shared-content/apstra-server-replace-ssl-cert-with-self-signed.html
+The only "manual" adjustment to the script is the REGISTRATION_KEY, code you get from Marvis cloud and need to be changed in the docker file: <br>
 
-How to use it:
+- REGISTRATION_KEY= code  <br>
+
+how to is on Step #3 on official guide: <br>
+https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-setup-edge/apstra-cloud-services/topics/task/apstra-setup-the-edge.html  <br>
+
+
+How to use this script. *On Apstra VM:*
 
 sudo apt update <br>
 sudo apt -y install git <br>
