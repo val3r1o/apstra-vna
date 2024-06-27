@@ -1,12 +1,10 @@
 cd 
 mkdir apstra_edge
-cd apstra_edge
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
 cd apstra-edge-0.0.36/
-
 sudo vi docker-compose-0.0.36.yml
 
 sudo cp apstra-edge-0.0.36/docker-compose-0.0.36.yml apstra_edge/docker-compose.yml
