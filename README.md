@@ -8,13 +8,13 @@ https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-user-guide
 
 How to use it:
 
-sudo apt update
-sudo apt -y install git
-git clone https://github.com/val3r1o/apstra-vna
-cd apstra-vna
-ls
-sudo chmod 755 install.sh
-ls
+sudo apt update <br>
+sudo apt -y install git <br>
+git clone https://github.com/val3r1o/apstra-vna <br>
+cd apstra-vna <br>
+ls <br>
+sudo chmod 755 install.sh <br>
+ls <br>
 
 #run the script
 ./install.sh
