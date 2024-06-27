@@ -17,7 +17,7 @@ cd apstra_edge
 #
 
 # PLEASE CHANGE HERE BELOW THE REGISTRATION_KEY
-sudo tee /apstra_edge/docker-compose.yml << EOF
+sudo tee docker-compose.yml << EOF
 version: '3.0'
 volumes:
   apstra_edge_store:
@@ -60,10 +60,7 @@ EOF
 #check
 # sudo cat docker-compose.yml
 
-# - REGISTRATION_KEY=<registration-code>
-# - CLOUD_TERM=ep-term.ai.juniper.net
-# - AOS_INSECURE_SKIP_VERIFY=true
-
+sudo chmod 755 apstra-edge-container-0.0.36.tgz
 sudo docker load < apstra-edge-container-0.0.36.tgz
 #-------------------------------------------------------------------------
 # Replace certificate
@@ -77,7 +74,9 @@ sudo cp ~/apstra-edge-0.0.36/ssl-keys/ep-term.ai.juniper.net.cer .
 sudo chmod 644 ep-term.ai.juniper.net.cer
 sudo update-ca-certificates
 
+cd
 cd apstra_edge
+sudo chmod 755 docker-compose.yml
 docker compose up -d
 
 sleep 5s # Waits 5 seconds.
