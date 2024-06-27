@@ -1,7 +1,6 @@
+cd 
 mkdir apstra_edge
-
-sudo cp instal.sh apstra_edge/install.sh
-
+cd apstra_edge
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
 tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
@@ -10,11 +9,9 @@ cd apstra-edge-0.0.36/
 
 sudo vi docker-compose-0.0.36.yml
 
-mkdir apstra_edge
-
 sudo cp apstra-edge-0.0.36/docker-compose-0.0.36.yml apstra_edge/docker-compose.yml
 sudo cp apstra-edge-0.0.36/apstra-edge-container-0.0.36.tgz apstra_edge/
-
+cd
 cd apstra_edge
 
 # read -p "Enter Your REGISTRATION_KEY: " KEY
