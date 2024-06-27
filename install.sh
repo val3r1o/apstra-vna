@@ -1,10 +1,7 @@
 cd 
 mkdir apstra_edge
 
-wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
-
-#wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik" -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz && rm -rf /tmp/cookies.txt
-
+wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
 tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
