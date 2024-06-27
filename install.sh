@@ -1,9 +1,11 @@
 cd 
 mkdir apstra_edge
 
-wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
+ sudo pip install gdown
 
-tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
+sudo gdown https://drive.google.com/uc?id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z
+
+sudo tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
 cd apstra-edge-0.0.36/
 sudo vi docker-compose-0.0.36.yml
