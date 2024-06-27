@@ -1,25 +1,23 @@
 cd 
-mkdir apstra_edge
-
- sudo pip install gdown
-
+sudo pip install gdown
 sudo gdown https://drive.google.com/uc?id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z
-
 sudo tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
-cd apstra-edge-0.0.36/
-sudo vi docker-compose-0.0.36.yml
-
+#cd apstra-edge-0.0.36/
+#sudo vi docker-compose-0.0.36.yml
+# cd
+mkdir apstra_edge
 sudo cp apstra-edge-0.0.36/docker-compose-0.0.36.yml apstra_edge/docker-compose.yml
 sudo cp apstra-edge-0.0.36/apstra-edge-container-0.0.36.tgz apstra_edge/
-cd
+
 cd apstra_edge
 
 # read -p "Enter Your REGISTRATION_KEY: " KEY
 # read -p "Enter Your Apstra_IP_Address: " IPA
 #
 
-sudo tee /apstra_edge/docker-compose.yml <<EOF
+# PLEASE CHANGE HERE BELOW THE REGISTRATION_KEY
+sudo tee /apstra_edge/docker-compose.yml << EOF
 version: '3.0'
 volumes:
   apstra_edge_store:
@@ -51,15 +49,16 @@ services:
     network_mode: "host"
     environment:
       # The registration key of the apstra-edge registered in the PAPI/UI
-      # mandatory
-      - REGISTRATION_KEY=zgiDWJRKCcP0S8L06u5Gwby-NU1Lwu6Dyei62qnHx8jVYAAAj7Sgx2V6bv5KfwJ6
+      # mandatory <<<copy the ID here from ADOPT APSTRA EDGE>>>
+      - REGISTRATION_KEY=zWXqd53u63AirDeT70qK6rZ2aBt2GG6Gfp2-w3j8n56STQ2-QPmsxW016Bp4L1Kz
       # The hostname of the cloud endpoint, EPTerm
       # mandatory
       - CLOUD_TERM=ep-term.ai.juniper.net
       - AOS_INSECURE_SKIP_VERIFY=true
 EOF
 
-sudo vi docker-compose.yml
+#check
+# sudo cat docker-compose.yml
 
 # - REGISTRATION_KEY=<registration-code>
 # - CLOUD_TERM=ep-term.ai.juniper.net
