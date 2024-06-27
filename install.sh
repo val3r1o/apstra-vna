@@ -1,5 +1,8 @@
+mkdir apstra_edge
 
-wget -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz "https://JUNIPER-DOWLOAD-LINK.tar.gz"
+sudo cp instal.sh apstra_edge/install.sh
+
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vEE3qpmwF6PqACTVpdOq_ats50z7afik' -O apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
 tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
 
