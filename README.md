@@ -3,8 +3,12 @@ Apsta-Marvis Integration for AIOPS
 
 Official site: <br>
 https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-setup-edge/index.html  <br>
-The only "manual" adjustment to the script is the REGISTRATION_KEY, code you get from Marvis cloud and need to be changed in the docker file: <br>
-- REGISTRATION_KEY= code  <br>
+
+The only manual adjustment to this script is the REGISTRATION_KEY <br>
+Get the code from Marvis Cloud and change it in the docker file in the Install script <be>
+
+REGISTRATION_KEY= code  <be>
+
 How to is on Step #3 on official guide: <br>
 https://www.juniper.net/documentation/us/en/software/apstra4.2/apstra-setup-edge/apstra-cloud-services/topics/task/apstra-setup-the-edge.html  <br>
 
