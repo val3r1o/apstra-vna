@@ -1,4 +1,3 @@
-# ADD COMMENT OLE' BART !! 
 cd 
 sudo pip install gdown
 sudo gdown https://drive.google.com/uc?id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z
