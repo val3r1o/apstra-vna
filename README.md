@@ -24,4 +24,3 @@ ls <br>
 -
 #run the script <br>
 ./install.sh
-
