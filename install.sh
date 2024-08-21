@@ -70,8 +70,8 @@ sudo docker load < apstra-edge-container-0.0.36.tgz
 #------------------------------------------------------------------------
 
 cd /etc/ssl/certs
-sudo cp ~/apstra-edge-0.0.36/ssl-keys/ep-term.ai.juniper.net.cer .
-sudo chmod 644 ep-term.ai.juniper.net.cer
+sudo cp ~/apstra-edge-0.0.36/ssl-keys/ep-term.stage.ai.juniper.net.cer .
+sudo chmod 644 ep-term.stage.ai.juniper.net.cer
 sudo update-ca-certificates
 
 cd
