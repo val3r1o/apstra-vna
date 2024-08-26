@@ -1,17 +1,15 @@
 cd 
 sudo pip install gdown
 sudo gdown sudo gdown https://drive.google.com/uc?id=1CssCIL6hOb2VmvZJgVUU2yELPUeFWdDr
-sudo tar -xvzf edge-0.0.59.tar.gz
+# sudo tar -xvzf edge-0.0.59.tar.gz
 
-#cd apstra-edge-0.0.36/
-#sudo vi docker-compose-0.0.36.yml
-# cd
 mkdir apstra_edge
 sudo cp apstra-edge-0.0.59/docker-compose-0.0.59.yml apstra_edge/docker-compose.yml
 sudo cp apstra-edge-0.0.59/apstra-edge-container-0.0.59.tgz apstra_edge/
 
 cd apstra_edge
 
+#
 # read -p "Enter Your REGISTRATION_KEY: " KEY
 # read -p "Enter Your Apstra_IP_Address: " IPA
 #
