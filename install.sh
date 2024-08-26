@@ -1,6 +1,6 @@
 cd 
 sudo pip install gdown
-sudo gdown https://drive.google.com/file/d/1CssCIL6hOb2VmvZJgVUU2yELPUeFWdDr/view?usp=sharing
+sudo gdown sudo gdown https://drive.google.com/uc?id=1CssCIL6hOb2VmvZJgVUU2yELPUeFWdDr
 sudo tar -xvzf edge-0.0.59.tar
 
 #cd apstra-edge-0.0.36/
