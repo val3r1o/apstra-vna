@@ -50,10 +50,10 @@ services:
     environment:
       # The registration key of the apstra-edge registered in the PAPI/UI
       # mandatory <<<copy the ID here from ADOPT APSTRA EDGE>>>
-      - REGISTRATION_KEY=yBqsmJ-amqSB3TFhmaGxM2M71rUWNItFzhxUOG3zOdA801YzIZwVEh78x2vcvRkf
+      - REGISTRATION_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       # The hostname of the cloud endpoint, EPTerm
       # mandatory
-      - CLOUD_TERM=ep-term.stage.ai.juniper.net
+      - CLOUD_TERM=ep-term.ai.juniper.net
       - AOS_INSECURE_SKIP_VERIFY=true
 EOF
 
