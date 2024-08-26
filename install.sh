@@ -1,7 +1,7 @@
 cd 
 sudo pip install gdown
 sudo gdown sudo gdown https://drive.google.com/uc?id=1CssCIL6hOb2VmvZJgVUU2yELPUeFWdDr
-sudo tar -xvzf edge-0.0.59.tar
+sudo tar -xvzf edge-0.0.59.tar.gz
 
 #cd apstra-edge-0.0.36/
 #sudo vi docker-compose-0.0.36.yml
