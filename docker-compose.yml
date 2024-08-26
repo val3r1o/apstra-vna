@@ -1,0 +1,39 @@
+version: '3.0'
+volumes:
+  apstra_edge_store:
+services:
+  apstra-edge:
+    # Name of the edge container
+    container_name: apstra-edge
+    # The image to be used for the edge container
+    #image: apstra-edge:0.0.59
+    image: svl-artifactory.juniper.net/cdo-docker/aide-jcloud/aos-edge:0.0.59
+    # The restart policy for the container
+    restart: always
+    # pull_policy is set to always to ensure that the latest image is always used
+    #pull_policy: always
+    pull_policy: never
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "30m"
+        max-file: "10"
+    # List of volumes to be mounted to the container
+    volumes:
+      # Allows the container to access the host's SSL certificates
+      - /etc/ssl/certs:/etc/ssl/certs
+      # Allows the container to access the host's /etc/hosts file
+      - /etc/hosts:/etc/hosts
+      # Allows apstra-edge to store auth data retrieved from the cloud during registration
+      # This volume is used to persist the data across container restarts
+      # User must backup this volume to avoid data loss
+      - apstra_edge_store:/var/lib/aos-edge
+    network_mode: "host"
+    environment:
+      # The registration key of the apstra-edge registered in the PAPI/UI
+      # mandatory
+      - REGISTRATION_KEY=xTm3DwqKdKTgnzXOFySZFRhkcR6BSCSfp31hwdxB4fgVTXkhXXf1XLOIW-8p4CPs
+      # The hostname of the cloud endpoint, EPTerm
+      # mandatory
+      - CLOUD_TERM=ep-term.stage.ai.juniper.net
+      - AOS_INSECURE_SKIP_VERIFY=true
