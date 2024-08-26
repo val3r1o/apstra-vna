@@ -10,7 +10,7 @@ How to use this script. *On Apstra VM:
 -
 sudo apt update <br>
 sudo apt -y install git <br>
-git clone https://github.com/val3r1o/apstra-vna --Internal(stage) <br>
+git clone https://github.com/val3r1o/apstra-vna --branch Internal <br>
 cd apstra-vna <br>
 ls <br>
 sudo chmod 755 install.sh <br>
