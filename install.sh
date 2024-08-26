@@ -1,14 +1,14 @@
 cd 
 sudo pip install gdown
-sudo gdown https://drive.google.com/uc?id=1DDthM8Vz0S3T3E8HdJ0tG77bhm0hsQ4Z
-sudo tar -xvzf apstra-cloud-services-edge_4.2.1_0.0.36_1.tar.gz
+sudo gdown https://drive.google.com/file/d/1CssCIL6hOb2VmvZJgVUU2yELPUeFWdDr/view?usp=sharing
+sudo tar -xvzf edge-0.0.59.tar
 
 #cd apstra-edge-0.0.36/
 #sudo vi docker-compose-0.0.36.yml
 # cd
 mkdir apstra_edge
-sudo cp apstra-edge-0.0.36/docker-compose-0.0.36.yml apstra_edge/docker-compose.yml
-sudo cp apstra-edge-0.0.36/apstra-edge-container-0.0.36.tgz apstra_edge/
+sudo cp apstra-edge-0.0.59/docker-compose-0.0.59.yml apstra_edge/docker-compose.yml
+sudo cp apstra-edge-0.0.59/apstra-edge-container-0.0.59.tgz apstra_edge/
 
 cd apstra_edge
 
@@ -26,11 +26,13 @@ services:
     # Name of the edge container
     container_name: apstra-edge
     # The image to be used for the edge container
-    image: apstra-edge:0.0.36
+    #image: apstra-edge:0.0.59
+    image: svl-artifactory.juniper.net/cdo-docker/aide-jcloud/aos-edge:0.0.59
     # The restart policy for the container
     restart: always
     # pull_policy is set to always to ensure that the latest image is always used
     #pull_policy: always
+    pull_policy: never
     logging:
       driver: "json-file"
       options:
@@ -49,12 +51,13 @@ services:
     network_mode: "host"
     environment:
       # The registration key of the apstra-edge registered in the PAPI/UI
-      # mandatory <<<copy the ID here from ADOPT APSTRA EDGE>>>
-      - REGISTRATION_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      # MANDATORY
+      - REGISTRATION_KEY=ydaVO7HJ0MzX2JNgT2AKPXCWIsS9dX-2XCWlkzNBQKmiz1Oy5tW8cn68QHfD9i7o
       # The hostname of the cloud endpoint, EPTerm
       # mandatory
-      - CLOUD_TERM=ep-term.ai.juniper.net
+      - CLOUD_TERM=ep-term.stage.ai.juniper.net
       - AOS_INSECURE_SKIP_VERIFY=true
+
 EOF
 
 #check
